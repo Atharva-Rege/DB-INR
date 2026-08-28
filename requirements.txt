@@ -1,0 +1,6 @@
+torch>=2.2
+numpy>=1.24
+opencv-python>=4.8
+nibabel>=5.1
+scipy>=1.11
+medsegbench>=0.1
