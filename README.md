@@ -31,6 +31,12 @@ Reference implementation of the **DB-INR** layer and the meta-learned implicit s
 
 A coordinate network maps a spatial location to an intensity, and a small per-pixel head reads class labels from its penultimate features. **DB-INR** replaces the single sinusoid of each layer with a **low- and a high-frequency band**, each with its own projection and initialisation, mixed with a fixed equal weight and added to a residual scaled by 1/√2. At test time the network is fitted to the intensities of an unseen scan, and the labels are read off in one forward pass. **No annotation of the test scan is used.**
 
+<p align="center">
+<img src="./docs/assets/fig1_architecture.png" alt="DB-INR pipeline and layer" width="100%"/>
+<br/>
+<em><b>Fig. 1. Overview of the pipeline and of the DB-INR layer.</b> <b>(I)</b> A coordinate network f<sub>θ</sub> and a per-pixel head g<sub>φ</sub> are meta-learned with MAML under a reconstruction and a classification term. <b>(II)</b> At test time f<sub>θ</sub> is fitted to an unseen scan with the reconstruction term alone and labels are read from its penultimate features in one pass, with φ frozen, so no annotation of the test scan is used. The block inside f<sub>θ*</sub> is the DB-INR layer: a projection per band at its own effective frequency, the mixing gate pinned to the constant g = ½ rather than learned, and a residual scaled by 1/√2.</em>
+</p>
+
 ## 📖 Contents
 - [🧠 Method](#-method)
 - [🏆 Results](#-results)
@@ -235,7 +241,7 @@ DB-INR/
 │   └── metrics.py    # Dice, IoU, HD95, ASSD, NSD, PSNR
 ├── train.py          # two-stage training
 ├── evaluate.py       # test-time fitting and evaluation
-├── docs/assets/      # README figures
+├── docs/assets/      # README figures (architecture, results, qualitative)
 └── requirements.txt
 ```
 
