@@ -10,7 +10,7 @@ alt="Typing SVG"
 style="margin-bottom:-10px; display:block;" />
 </a>
 
-[![WACV 2027](https://img.shields.io/badge/WACV_2027-Submission_(Applications)-8C1B13?style=for-the-badge)](#-citation)
+[![ISBI 2027](https://img.shields.io/badge/IEEE_ISBI_2027-Submission-8C1B13?style=for-the-badge)](#-citation)
 [![Weights](https://img.shields.io/badge/Weights-Google_Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](#-pretrained-weights)
 [![Task](https://img.shields.io/badge/Task-Implicit_Segmentation-37CCB6?style=for-the-badge)](#-method)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.2+-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](#️-installation)
@@ -24,7 +24,7 @@ style="margin-bottom:-10px; display:block;" />
 
 ## 🔥 News
 - **[Oct 2026]** 🚀 Code and checkpoints for the three benchmarks of Table 1 are released.
-- 📄 The paper is submitted to **WACV 2027** (Applications track).
+- 📄 The paper is submitted to **IEEE ISBI 2027**.
 
 ## Overview
 Reference implementation of the **DB-INR** layer and the meta-learned implicit segmentation pipeline it is trained in.
